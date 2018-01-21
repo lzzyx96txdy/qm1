@@ -1,0 +1,75 @@
+\PassOptionsToPackage{draft}{graphicx}
+\documentclass[zihao=-4]{ctexbook}
+\usepackage{geometry}
+\geometry{a4paper,hmargin=1.5in,vmargin=1in}
+\ctexset{today=small}
+\pagestyle{headings}
+
+\usepackage{tocloft}
+\usepackage{float,graphicx,amsmath,physics}
+
+\newcommand{\mr}{\mathrm}
+
+\title{《量子力学 I》 讲义}
+\author{\kaishu 张越昕}
+\date{\kaishu \today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\begin{figure}
+\centering
+\huge The goal of this course is to understand the basic of quantum mechanic.\\
+\raggedleft
+\Large --- CQW
+\end{figure}
+\clearpage 
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents
+
+\mainmatter
+\part{理\qquad 论}
+\chapter{波函数和薛定谔方程}
+\section{黑体辐射和普朗克的量子假设}
+19 世纪末，经典理论趋于完备。经典力学，经典电动力学，经典热力学形成了物理世界的三大支柱。似乎一切的物理现象，力、热、光、电、磁等一切的一切，都在人们的控制之中。
+
+但是在 1900 年 4 月 27 日，开尔文勋爵提到了 19 世纪热和光动力学理论上空的乌云：
+\begin{quote}\kaishu
+	“...动力学理论断言，热和光都是运动的方式。但现在这一理论的优美性和明晰性却被两朵乌云遮蔽，显得黯然失色了...”
+\end{quote}
+他提及的“两朵乌云”，就是人们未能完美解释的两个现象：迈克尔孙--莫雷实验和\textbf{黑体辐射}。
+
+\subsection{黑体辐射}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.49\textwidth]{cavity-radiation.png}
+\caption{空腔的辐射}
+\end{figure}
+“黑体”这个词是基尔霍夫在 1860 年的时候提出的。一个黑体是一种能吸收所有落在上面的光的物体。而黑体发出的光就叫做黑体辐射。单位时间、单位面积的黑体的辐射能量
+\begin{equation}
+	E=J(T)=\int E_\nu\, \mr{d}\nu,
+\end{equation}
+其中$E_\nu=J(T,\nu)$是在温度为$T$、频率为$\nu$时的辐射能量。
+
+1905 年，基于经典的热力学理论，瑞利和金斯提出了完整的瑞利--金斯公式
+\begin{equation}
+	E_\nu\,\mr{d}\nu =\frac{8\pi}{c^3}kT\nu^2\,\mr{d}\nu.
+\end{equation}
+然而，简单的计算却表明
+\begin{equation}
+	E_t=
+\end{equation}
+
+\section{光电效应和爱因斯坦的光量子假说}
+
+\section{原子结构和玻尔的量子理论}
+
+\section{波粒二象性}
+
+\chapter{不含时薛定谔方程}
+
+\part{应\qquad 用}
+
+
+
+\end{document}
