@@ -1,0 +1,76 @@
+%% Copyright (C) 2018 by Yuexin Zhang <zyx961113@outlook.com>
+%%
+%% -* Notes on Quantum Mechanic I *-
+%%
+
+\PassOptionsToPackage{draft}{graphicx}
+\documentclass[UTF-8,heading=true,%fontset=none,
+	zihao=-4,a4paper]{ctexbook}
+\usepackage{geometry}
+\geometry{hmargin=1in,vmargin=1.5in,headheight=15pt}
+\ctexset{today=small}
+%\pagestyle{headings}
+
+\usepackage{tocloft}
+\usepackage{graphicx,amsmath,physics,float,mathtools}
+
+%脚注
+\makeatletter\ExplSyntaxOn
+\RenewDocumentCommand \thefootnote { }
+{
+	\group_begin:
+		\fontspec{MSYH.TTC}
+		\__my_footnote_symbol:n { \c@footnote }
+	\group_end:
+}
+\cs_new:Npn \__my_footnote_symbol:n #1
+{
+	\int_compare:nTF { #1 >= 10 }
+	{
+		\int_compare:nTF { #1 >= 36 }
+		{ \symbol { \int_eval:n { "24B6 - 36 + #1 } } }
+		{ \symbol { \int_eval:n { "24D0 - 10 + #1 } } }
+	}
+	{ \symbol { \int_eval:n { "2460 - 1 + #1 } } }
+}
+\RenewDocumentCommand \@makefntext { +m }
+{
+	\dim_set:Nn \l_tmpa_dim { \textwidth - 1.5 em }
+	\makebox [ 1.5 em ] [ l ] { \@thefnmark }
+	\parbox [ t ] { \l_tmpa_dim }
+	{ \everypar { \hspace* { 2 em } } \hspace* { -2 em } #1 }
+}
+\ExplSyntaxOff\makeatother
+
+\newcommand\mr{\mathrm}
+
+\title{《量子力学 I》 讲义}
+\author{\kaishu 复旦大学\quad 张越昕}
+\date{\kaishu \today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\begin{figure}
+\centering
+\huge The goal of this course is to understand the basic of quantum mechanic.\\
+\raggedleft
+\Large --- CQW
+\end{figure}
+\clearpage 
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents
+
+\mainmatter
+\part{理\qquad 论}
+\chapter{波函数和薛定谔方程}
+\include{chapters/chap1}
+%\include{chapters/chap2}
+%\include{chapters/chap3}
+
+
+\part{应\qquad 用}
+1
+
+
+\end{document}
