@@ -1,10 +1,64 @@
-\documentclass[a4paper]{article}
+%% Copyright (C) 2018 by Yuexin Zhang <zyx961113@outlook.com>
+%%
+%% -* Notes on Quantum Mechanic I *-
+%%
 
-\usepackage{ctex}
-\usepackage{geometry}
-    \geometry{hmargin=1in,vmargin=1.5in,headheight=15pt}
-\usepackage{graphicx,amsmath,physics}
+\section{黑体辐射和普朗克的量子假设}
+19 世纪末，经典理论趋于完备。经典力学，经典电动力学，经典热力学形成了物理世界的三大支柱。似乎一切的物理现象，力、热、光、电、磁等一切的一切，都在人们的控制之中。
 
-\begin{document}
-	内容...
-\end{document}
+但是在 1900 年 4 月 27 日，开尔文勋爵提到了 19 世纪热和光动力学理论上空的乌云：
+\begin{quote}\kaishu
+	“...动力学理论断言，热和光都是运动的方式。但现在这一理论的优美性和明晰性却被两朵乌云遮蔽，显得黯然失色了...”
+\end{quote}
+他提及的“两朵乌云”，就是人们未能完美解释的两个现象：迈克尔孙--莫雷实验和\textbf{黑体辐射}。
+
+\subsection{黑体辐射}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.49\textwidth]{cavity-radiation.png}
+    \caption{空腔的辐射}
+\end{figure}
+“黑体”一词是基尔霍夫在 1860 年的时候提出的。一个黑体是一种能吸收所有落在上面的光的物体。而黑体发出的光就叫做黑体辐射。单位时间、单位面积的黑体辐射的能量
+\begin{equation}
+	E=J(T)=\int E_\nu\, \mr{d}\nu,
+\end{equation}
+其中$E_\nu=J(T,\nu)$是在温度为$T$、频率为$\nu$时辐射能量密度。
+
+1905年，根据经典电动力学和统计力学导出的热平衡辐射能量分布公式，瑞利和金斯研究了密封空腔中的电磁场，得到了空腔辐射的能量密度$E_\nu$按频率$\nu$分布的\textbf{瑞利--金斯公式}\footnote{linzonghan}
+\begin{equation}
+	E_\nu\,\mr{d}\nu =\frac{8\pi}{c^3}kT\nu^2\,\mr{d}\nu.
+\end{equation}
+然而，简单的计算却表明
+\begin{align}
+    E_t
+    &=\int^{\infty}_{0} E_\nu \, \mr{d}\nu \notag\\
+    &=\frac{8\pi}{c^3}\int^{\infty}_{0}\nu^2\, \mr{d}\nu\, \to \infty,
+\end{align}
+积分是发散的。人们称之为\textbf{紫外灾难}。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{wien's-law.png}
+	\caption{黑体辐射波长和自身绝对温度的关系图}
+\end{figure}
+另一方面，1896年，维恩基于实验数据的经验总结，提出了\textbf{维恩公式}
+\begin{equation}
+	E_\nu\, \mr{d}\nu
+	=C_1\nu^3 \mr{e}^\frac{-C_2\nu}{T} \, \mr{d}\nu,
+\end{equation}
+以及\textbf{维恩位移定律}，即黑体辐射强度峰值的波长和黑体自身温度的关系
+\begin{equation}
+	\lambda_{\mr{max}}=\frac{b}{T},
+\end{equation}
+其中$C_1$、$C_2$以及$b$都是常数。根据维恩位移定律，人们可以根据黑体辐射的波长来计算黑体的温度。维恩也因此被授予 1911 年诺贝尔物理学奖。
+
+然而瑞利--金斯公式在紫外发散，维恩公式在长波区与实验严重不符，这一问题亟待解决。在这种情况下，时代的一位巨人，量子力学的奠基人之一，普朗克站了出来并通过理论假设很好地解决了这一问题。
+
+\subsection{普朗克的量子假设}
+
+
+
+
+
+
+
