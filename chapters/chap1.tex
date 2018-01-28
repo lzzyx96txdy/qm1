@@ -4,13 +4,11 @@
 %%
 
 \section{黑体辐射和普朗克的量子假设}
-19 世纪末，经典理论趋于完备。经典力学，经典电动力学，经典热力学形成了物理世界的三大支柱。似乎一切的物理现象，力、热、光、电、磁等一切的一切，都在人们的控制之中。
-
-但是在 1900 年 4 月 27 日，开尔文勋爵提到了 19 世纪热和光动力学理论上空的乌云：
+19 世纪末，经典理论趋于完备。经典力学，经典电动力学，经典热力学形成了物理世界的三大支柱。似乎一切的物理现象，力、热、光、电、磁等一切的一切，都在人们的控制之中。但是在 1900 年 4 月 27 日，开尔文勋爵提到了 19 世纪热和光动力学理论上空的乌云：
 \begin{quote}\kaishu
 	“...动力学理论断言，热和光都是运动的方式。但现在这一理论的优美性和明晰性却被两朵乌云遮蔽，显得黯然失色了...”
 \end{quote}
-他提及的“两朵乌云”，就是人们未能完美解释的两个现象：迈克尔孙--莫雷实验和\textbf{黑体辐射}。
+他提及的“两朵乌云”，就是人们通过经典的物理未能完美解释的两个现象：迈克尔孙--莫雷实验和\textbf{黑体辐射}。
 
 \subsection{黑体辐射}
 \begin{figure}[H]
@@ -20,19 +18,19 @@
 \end{figure}
 “黑体”一词是基尔霍夫在 1860 年的时候提出的。一个黑体是一种能吸收所有落在上面的光的物体。而黑体发出的光就叫做黑体辐射。单位时间、单位面积的黑体辐射的能量
 \begin{equation}
-	E=J(T)=\int E_\nu\, \mr{d}\nu,
+	E=J(T)=\int E_\nu\dd{\nu},
 \end{equation}
-其中$E_\nu=J(T,\nu)$是在温度为$T$、频率为$\nu$时辐射能量密度。
+其中$E_\nu=J(T,\,\nu)$是在温度为$T$、频率为$\nu$时辐射能量密度。
 
-1905年，根据经典电动力学和统计力学导出的热平衡辐射能量分布公式，瑞利和金斯研究了密封空腔中的电磁场，得到了空腔辐射的能量密度$E_\nu$按频率$\nu$分布的\textbf{瑞利--金斯公式}\footnote{linzonghan}
+1905年，根据经典电动力学和统计力学导出的热平衡辐射能量分布公式，瑞利和金斯研究了密封空腔中的电磁场，得到了空腔辐射的能量密度$E_\nu$按频率$\nu$分布的\textbf{瑞利--金斯公式}\footnote{具体推导见林宗涵《热力学与统计物理学》}
 \begin{equation}
-	E_\nu\,\mr{d}\nu =\frac{8\pi}{c^3}kT\nu^2\,\mr{d}\nu.
+	E_\nu\dd{\nu} =\frac{8\pp}{c^3}\kB T\nu^2\dd{\nu}.
 \end{equation}
 然而，简单的计算却表明
 \begin{align}
-    E_t
-    &=\int^{\infty}_{0} E_\nu \, \mr{d}\nu \notag\\
-    &=\frac{8\pi}{c^3}\int^{\infty}_{0}\nu^2\, \mr{d}\nu\, \to \infty,
+	E_t
+	&=\int^{\infty}_{0} E_\nu \dd{\nu} \notag\\
+	&=\frac{8\pp}{c^3}\int^{\infty}_{0}\nu^2\dd{\nu}\, \to \infty,
 \end{align}
 积分是发散的。人们称之为\textbf{紫外灾难}。
 
@@ -40,11 +38,12 @@
 	\centering
 	\includegraphics[width=0.49\textwidth]{wien's-law.png}
 	\caption{黑体辐射波长和自身绝对温度的关系图}
+	\label{fig:wein's-law}
 \end{figure}
-另一方面，1896年，维恩基于实验数据的经验总结，提出了\textbf{维恩公式}
+另一方面，1896年，维恩基于实验数据（图~\ref{fig:wein's-law}）的经验总结，提出了\textbf{维恩公式}
 \begin{equation}
-	E_\nu\, \mr{d}\nu
-	=C_1\nu^3 \mr{e}^\frac{-C_2\nu}{T} \, \mr{d}\nu,
+	E_\nu\dd{\nu}
+	=C_1\nu^3 \mr{exp}(-C_2\nu/T) \dd{\nu},
 \end{equation}
 以及\textbf{维恩位移定律}，即黑体辐射强度峰值的波长和黑体自身温度的关系
 \begin{equation}
@@ -52,9 +51,69 @@
 \end{equation}
 其中$C_1$、$C_2$以及$b$都是常数。根据维恩位移定律，人们可以根据黑体辐射的波长来计算黑体的温度。维恩也因此被授予 1911 年诺贝尔物理学奖。
 
-然而瑞利--金斯公式在紫外发散，维恩公式在长波区与实验严重不符，这一问题亟待解决。在这种情况下，时代的一位巨人，量子力学的奠基人之一，普朗克站了出来并通过理论假设很好地解决了这一问题。
+然而瑞利--金斯公式在紫外发散，维恩公式在长波区与实验严重不符，这一问题亟待解决。在这种情况下，时代的一位巨人，量子力学的奠基人之一，马克思·普朗克站了出来并通过理论假设很好地解决了这一问题。他也因此获得了 1918 年诺贝尔物理学奖。
 
 \subsection{普朗克的量子假设}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.49\textwidth]{plankformula.png}
+	\caption{普朗克公式的曲线与瑞利--金斯、维恩公式的曲线对比}
+\end{figure}
+1900 年 10 月 7 日，亨里奇·鲁本拜访了普朗克，并且把他的黑体辐射实验数据和结果介绍给了普朗克。在鲁本离开后的几个小时内，普朗克就猜到了黑体辐射的正确公式。
+
+普朗克对维恩公式进行了假设性的修正，
+\begin{equation}
+	E_\nu = \frac{C_1 \nu^3}{\mr{exp}(C_2\nu/T)-1}.
+\end{equation}
+他的这个猜测结果在各个波长均与实验结果拟合的很好。但普朗克对此并不满意，他想尝试给出方程背后的物理理论。同年，基于热力学第二定律的玻尔兹曼统计解释，普朗克得到了该修正公式的一个更加物理的解释：
+\begin{equation}
+	E_\nu\dd{\nu}= \varepsilon_\nu g(\nu)\dd{\nu}
+\end{equation}
+其中$g(\nu)\dd{\nu}$是频率处于$\nu$和$\nu+\dd{\nu}$之间允许电磁波模式的数目，而$\varepsilon_\nu$正是频率为$\nu$的每一电磁波模式的辐射能量。
+
+根据统计物理，
+\begin{equation}
+	\boxed{g(\nu)\dd{\nu}\sim\nu^2\dd{\nu}}.\footnote{荣誉课学生思考题}
+\end{equation}
+所以，
+\begin{equation}
+	E_\nu\dd{\nu}=
+	\frac{\kB C_2\nu}{\mr{exp}(\kB C_2\nu/\kB T)-1}\cdot\frac{C_1}{\kB C_2}
+	\nu^2\dd{\nu}.
+\end{equation}
+立即得到频率为$\nu$的一个电磁波模式的平均能量：
+\begin{equation}
+	\varepsilon_\nu=
+	\frac{\kB C_2\nu}{\mr{exp}(\kB C_2\nu/kT)-1}.
+\end{equation}
+进一步，令$\beta=1/\kB T$，观察数学结构有
+\begin{equation}
+	\varepsilon_\nu=
+	-\pdv{\beta}\mr{ln}\qty\big[1-\mr{exp}(-\beta\kB C_2\nu)].
+\end{equation}
+利用上述结果对比统计系综理论，得到频率为$\nu$的驻波模式的配分函数为
+\begin{align}
+	Z(\nu)
+	&=\frac{1}{1-\ee^{\beta\kB C_2\nu}}\notag\\
+	&=1+\ee^{-\beta\kB C_2\nu}+\ee^{-2\beta\kB C_2\nu}+\ee^{-3\beta\kB C_2\nu}+\cdots\notag\\
+	&=\sum_{n=1}^{\infty}\ee^{-n\beta\kB C_2\nu}.
+\end{align}
+上式是一个与频率$\nu$相关的电磁波模式构成的热力学系统的配分函数。构造另一个常数$h=\kB C_2$，即为现在我们所熟知的普朗克常数$h\approx6.626\times10^{-34}\,\mr{J\cdot s}$。所以配分函数可以改写为
+\begin{equation}
+	Z(\nu)=\sum_{n=1}^{\infty}\ee^{-nh\nu/\kB T}.
+\end{equation}
+系统的能量只能是一个基本量$h\nu$的整数倍$nh\nu\,(n=1,\,2,\,3,\,\cdots).$普朗克进一步推论：一个频率为$\nu$的电磁波模式，其辐射能量只能是最小单位$\varepsilon_\nu=h\nu$的整数倍。他也因这个里程碑式的成就而获得了 1918 年诺贝尔物理学奖。
+
+而我们现在所熟知的普朗克的量子化假设是：\textbf{电磁波}的\textbf{辐射}只能以\textbf{量子化}的形式进行，对频率为$\nu$的电磁波，辐射的能量只能为$nh\nu$，其中$n=1,\,2,\,3,\,\cdots$
+
+%TODO 
+%几个例子的环境设置
+
+
+
+
+
+
 
 
 

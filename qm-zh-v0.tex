@@ -13,8 +13,26 @@
 
 \usepackage{tocloft}
 \usepackage{graphicx,amsmath,physics,float,mathtools}
+\usepackage[svgnames]{xcolor}
+%\usepackage{xeCJK}
 
-%脚注
+%\xeCJKsetup{underline/skip=true}
+%%xeCJK宏包设置
+%\xeCJKsetup{ulem={textformat=\color{red}, skip=false}}
+
+\usepackage[hyperindex]{hyperref}
+\hypersetup{
+	%%超链接边框颜色
+	colorlinks,
+	linkcolor = {red!60!black}
+}
+
+%%西文字体
+%\setmainfont{Libertinus Serif}
+%\setsansfont{Source Sans Pro Semibold}[BoldFont = Source Sans Pro Bold]
+%\setmathfont{Libertinus Math}[math-style = ISO, bold-style = ISO]
+
+%%脚注
 \makeatletter\ExplSyntaxOn
 \RenewDocumentCommand \thefootnote { }
 {
@@ -42,35 +60,72 @@
 }
 \ExplSyntaxOff\makeatother
 
+%%公式编号（mathtools宏包)
+%\newtagform{brackets2}[\textbf]{[}{]}%中括号，加粗
+%\usetagform{brackets2}
+\usetagform{default}
+
+%%公式
+%\NewDocumentEnvironment{boxeq}{}%
+%{\empheq[box=\fbox]{equation}}%
+%{\endempheq}
+%\makeatletter\ExplSyntaxOn
+%\ctex_patch_cmd:Nnn \HyOrg@subequations
+%{ \def \theequation { \theparentequation \alph { equation } } }
+%{ \def \theequation { \theparentequation - \alph { equation } } }
+%\ExplSyntaxOff\makeatother
+%\NewDocumentEnvironment{braced}{O{}O{align}}%
+%{\subequations#1%
+%	\setkeys{EmphEqEnv}{#2}%
+%	\setkeys{EmphEqOpt}{left=\empheqlbrace}%
+%	\EmphEqMainEnv}%
+%{\endEmphEqMainEnv\endsubequations}
+%\NewDocumentEnvironment{braced*}{O{align*}}%
+%{\setkeys{EmphEqEnv}{#1}%
+%	\setkeys{EmphEqOpt}{left=\empheqlbrace}%
+%	\EmphEqMainEnv}%
+%{\endEmphEqMainEnv}
+
+%%新命令
 \newcommand\mr{\mathrm}
+%% 数学、物理常数
+\newcommand\ee{\mathrm{e}}
+\newcommand\ii{\mathrm{i}}
+\newcommand\pp{\mathrm{\pi}}
+\newcommand\kB{k_{\mathrm{B}}} % Boltzmann constant
+%\newcommand\ee{\symrm{e}}
+%\newcommand\ii{\symrm{i}}
+%\newcommand\pp{\symrm{\pi}}
+%\newcommand\kB{k_{\symrm{B}}} % Boltzmann constant
 
 \title{《量子力学 I》 讲义}
 \author{\kaishu 复旦大学\quad 张越昕}
 \date{\kaishu \today}
 
-\begin{document}
-\frontmatter
-\maketitle
-\begin{figure}
-\centering
-\huge The goal of this course is to understand the basic of quantum mechanic.\\
-\raggedleft
-\Large --- CQW
-\end{figure}
-\clearpage 
-\addcontentsline{toc}{chapter}{\contentsname}
-\tableofcontents
+%%%%%%%%%%%%%%%%%
+%%  main body  %%
+%%%%%%%%%%%%%%%%%
 
-\mainmatter
-\part{理\qquad 论}
-\chapter{波函数和薛定谔方程}
+\begin{document}
+%\frontmatter
+%\maketitle
+%\begin{figure}
+%\centering
+%\huge The goal of this course is to understand the basic of quantum mechanic.\\
+%\raggedleft
+%\Large --- CQW
+%\end{figure}
+%\clearpage 
+%\addcontentsline{toc}{chapter}{\contentsname}
+%\tableofcontents
+%
+%\mainmatter
+%\part{理\qquad 论}
+%\chapter{波函数和薛定谔方程}
 \include{chapters/chap1}
 %\include{chapters/chap2}
 %\include{chapters/chap3}
 
 
-\part{应\qquad 用}
-1
-
-
+%\part{应\qquad 用}
 \end{document}
