@@ -12,7 +12,7 @@
 %\pagestyle{headings}
 
 \usepackage{tocloft}
-\usepackage{graphicx,amsmath,physics,float,mathtools}
+\usepackage{graphicx,amsmath,physics,float,mathtools,ntheorem,siunitx}
 \usepackage[svgnames]{xcolor}
 %\usepackage{xeCJK}
 
@@ -60,6 +60,9 @@
 }
 \ExplSyntaxOff\makeatother
 
+%% siunitx
+\sisetup{inter-unit-product={\cdot}}
+
 %%公式编号（mathtools宏包)
 %\newtagform{brackets2}[\textbf]{[}{]}%中括号，加粗
 %\usetagform{brackets2}
@@ -85,6 +88,15 @@
 %	\setkeys{EmphEqOpt}{left=\empheqlbrace}%
 %	\EmphEqMainEnv}%
 %{\endEmphEqMainEnv}
+
+%%举例环境
+\begingroup
+\theoremstyle{plain}
+\theoremheaderfont{\sffamily}
+\theorembodyfont{\normalfont}
+\theoremsymbol{}
+\newtheorem{example}{例}[chapter]
+\endgroup
 
 %%新命令
 \newcommand\mr{\mathrm}
